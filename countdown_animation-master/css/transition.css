@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#transition {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#transition .transition-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#transition .transition-background .rainbow-circle {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%/100% 100% 0 0;
+    transform: translate(-50%, -50%) rotateZ(-180deg);
+    transform-origin: bottom;
+    left: 50%;
+}
+
+#transition .transition-background .rainbow-circle.no9 {
+    width: 100vh;
+    height: 50vh;
+    top: 90%;
+    background-color: rgb(172, 54, 201);
+    animation: rainbow 0.2s linear 0s forwards;
+}
+
+#transition .transition-background .rainbow-circle.no8 {
+    width: 120vh;
+    height: 60vh;
+    top: 85%;
+    background-color: rgb(54, 201, 152);
+    animation: rainbow 0.2s linear 0.1s forwards;
+}
+
+#transition .transition-background .rainbow-circle.no7 {
+    width: 140vh;
+    height: 70vh;
+    top: 80%;
+    background-color: rgb(224, 0, 0);
+    animation: rainbow 0.2s linear 0.2s forwards;
+}
+
+#transition .transition-background .rainbow-circle.no6 {
+    width: 160vh;
+    height: 80vh;
+    top: 75%;
+    background-color: rgb(205, 228, 0);
+    animation: rainbow 0.2s linear 0.3s forwards;
+}
+
+#transition .transition-background .rainbow-circle.no5 {
+    width: 180vh;
+    height: 90vh;
+    top: 70%;
+    background-color: rgb(245, 0, 94);
+    animation: rainbow 0.2s linear 0.4s forwards;
+}
+
+#transition .transition-background .rainbow-circle.no4 {
+    width: 200vh;
+    height: 100vh;
+    top: 65%;
+    background-color: rgb(194, 194, 194);
+    animation: rainbow 0.2s linear 0.5s forwards;
+}
+
+#transition .transition-background .rainbow-circle.no3 {
+    width: 220vh;
+    height: 110vh;
+    top: 60%;
+    background-color: rgb(255, 123, 174);
+    animation: rainbow 0.2s linear 0.6s forwards;
+}
+
+#transition .transition-background .rainbow-circle.no2 {
+    width: 240vh;
+    height: 120vh;
+    top: 55%;
+    background-color: rgb(0, 38, 255);
+    animation: rainbow 0.2s linear 0.7s forwards;
+}
+
+#transition .transition-background .rainbow-circle.no1 {
+    width: 260vh;
+    height: 130vh;
+    top: 50%;
+    background-color: orange;
+    animation: rainbow 0.2s linear 0.8s forwards;
+}
+
+#transition .transition-background .rainbow-circle.no10 {
+    width: 500vh;
+    height: 150vh;
+    top: 40%;
+    background-color: powderblue;
+    animation: rainbow 0.2s linear 0.9s forwards;
+}
+
+@keyframes rainbow {
+    from {
+        left: 50%;
+        transform: translate(-50%, -50%) rotateZ(-180deg);
+    }
+    to {
+        left: 50%;
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+}

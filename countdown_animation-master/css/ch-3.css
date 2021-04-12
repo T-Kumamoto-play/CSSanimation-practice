@@ -1,0 +1,299 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#ch-3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#ch-3 .box-container {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: rgb(124, 189, 197);
+    animation: back 0.4s ease 0s forwards;
+}
+
+#ch-3 .box-container .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#ch-3 .box-container .box.b1 {
+    width: 80vh;
+    height: 80vh;
+    opacity: 0;
+    background-color: rgb(93, 164, 173);
+    animation: box1 0.2s ease 0.4s forwards;
+}
+
+#ch-3 .box-container .box.b2 {
+    width: 60vh;
+    height: 60vh;
+    opacity: 0;
+    background-color: rgb(49, 126, 136);
+    animation: box2 0.2s ease 0.5s forwards;
+}
+
+#ch-3 .box-container .box.b3 {
+    width: 40vh;
+    height: 40vh;
+    opacity: 0;
+    background-color: rgb(11, 61, 68);
+    animation: box3 0.2s ease 0.7s forwards;
+}
+
+#ch-3 .text-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    background-color: rgba(0, 37, 158, 0.493);
+    animation: text-back 0.4s ease 1s forwards;
+    display: inline-block;
+}
+
+#ch-3 .text-container .text {
+    position: relative;
+    margin: 0 10%;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 300%;
+    color: snow;
+    text-shadow: navy 2px 2px 10px;
+}
+
+#ch-3 .text-container .img-container {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 1) 100%), url(../img/ch3-1.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 40%;
+    float: right;
+    box-shadow: navy 5px 5px 5px;
+}
+
+
+/**
+ * view-4
+ */
+
+.view-4 div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.view-4 div span {
+    display: block;
+    width: 100%;
+    height: 12.5%;
+    overflow: hidden;
+}
+
+.view-4 div span::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-101%)
+}
+
+.view-4 div:nth-child(1) span::after {
+    background-color: navy;
+}
+
+.view-4 div:nth-child(2) span::after {
+    background-color: rgb(66, 197, 147);
+}
+
+.view-4 div:nth-child(3) span::after {
+    background-color: rgb(209, 130, 39);
+}
+
+.view-4 div:nth-child(1) span::after {
+    animation: view-4__show-1 0.6s cubic-bezier(0.06, 0.64, 0.07, 1.01) 2.0s forwards;
+}
+
+.view-4 div:nth-child(2) span::after {
+    animation: view-4__show-2 0.6s cubic-bezier(0.06, 0.64, 0.07, 1.01) 2.7s forwards;
+}
+
+.view-4 div:nth-child(3) span::after {
+    animation: view-4__show-1 0.6s cubic-bezier(0.06, 0.64, 0.07, 1.01) 3.4s forwards;
+}
+
+
+/* -------------------------- */
+
+#ch-3 .box-container2 {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: rgb(209, 130, 39);
+    animation: back 0.4s ease 3.5s forwards;
+}
+
+#ch-3 .box-container2 .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#ch-3 .box-container2 .box.b1 {
+    width: 80vh;
+    height: 80vh;
+    opacity: 0;
+    background-color: rgb(187, 111, 24);
+    animation: box1 0.2s ease 3.9s forwards;
+}
+
+#ch-3 .box-container2 .box.b2 {
+    width: 60vh;
+    height: 60vh;
+    opacity: 0;
+    background-color: rgb(161, 93, 15);
+    animation: box2 0.2s ease 4.1s forwards;
+}
+
+#ch-3 .box-container2 .box.b3 {
+    width: 40vh;
+    height: 40vh;
+    opacity: 0;
+    background-color: rgb(122, 68, 7);
+    animation: box3 0.2s ease 4.3s forwards;
+}
+
+#ch-3 .text-container2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    background-color: rgba(122, 68, 7, 0.5);
+    animation: text-back 0.4s ease 4.5s forwards;
+    display: inline-block;
+}
+
+#ch-3 .text-container2 .text {
+    position: relative;
+    margin: 0 10%;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 300%;
+    color: snow;
+    text-shadow: rgb(122, 68, 7) 2px 2px 10px;
+}
+
+#ch-3 .text-container2 .img-container {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 1) 100%), url(../img/ch3-2.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 50%;
+    float: right;
+    box-shadow: rgb(122, 68, 7) 5px 5px 5px;
+}
+
+@keyframes view-4__show-1 {
+    from {
+        transform: translateY(-101%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes view-4__hidden-1 {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(-101%);
+    }
+}
+
+@keyframes view-4__show-2 {
+    from {
+        transform: translateY(101%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes view-4__hidden-2 {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(101%);
+    }
+}
+
+@keyframes text-back {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes box1 {
+    from {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) rotateZ(10deg) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes box2 {
+    from {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) rotateZ(25deg) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes box3 {
+    from {
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) rotateZ(45deg) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes back {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}

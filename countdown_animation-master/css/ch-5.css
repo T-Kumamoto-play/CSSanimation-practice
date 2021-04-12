@@ -1,0 +1,340 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#ch-5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: black;
+    overflow: hidden;
+}
+
+#ch-5 .text-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    animation: text-hide 0.1s step-end 1.3s forwards;
+}
+
+#ch-5 .text-box .text {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 300%;
+}
+
+@keyframes text-hide {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+/**
+ * view-5
+ * Author: yui540
+ */
+
+#ch-5 .view-5::before,
+#ch-5 .view-5::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+#ch-5 .view-5::before {
+    transform-origin: left top;
+    transform: translateY(100%) rotate(30deg);
+    background-color: #E1C96A;
+}
+
+#ch-5 .view-5::after {
+    transform-origin: right top;
+    transform: translateY(100%) rotate(-30deg);
+    background-color: #4DADAD;
+}
+
+#ch-5 .view-5::before {
+    animation: view-5__show-1 0.6s cubic-bezier(0.82, 0, 0.14, 1.02) 1s forwards, view-5__hidden-1 0.6s cubic-bezier(0.82, 0, 0.14, 1.02) 1.8s forwards;
+}
+
+#ch-5 .view-5::after {
+    animation: view-5__show-2 0.6s cubic-bezier(0.82, 0, 0.14, 1.02) 1.1s forwards, view-5__hidden-2 0.6s cubic-bezier(0.82, 0, 0.14, 1.02) 1.7s forwards;
+}
+
+@keyframes view-5__show-1 {
+    from {
+        transform: translateY(100%) rotate(30deg);
+    }
+    to {
+        transform: translateY(0%) rotate(0deg);
+    }
+}
+
+@keyframes view-5__hidden-1 {
+    from {
+        transform: translateY(0%) rotate(0deg);
+        transform-origin: left bottom;
+    }
+    to {
+        transform: translateY(-100%) rotate(-30deg);
+        transform-origin: left bottom;
+    }
+}
+
+@keyframes view-5__show-2 {
+    from {
+        transform: translateY(100%) rotate(-30deg);
+    }
+    to {
+        transform: translateY(0%) rotate(0deg);
+    }
+}
+
+@keyframes view-5__hidden-2 {
+    from {
+        transform: translateY(0%) rotate(0deg);
+        transform-origin: right bottom;
+    }
+    to {
+        transform: translateY(-100%) rotate(30deg);
+        transform-origin: right bottom;
+    }
+}
+
+
+/* ｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰ */
+
+#ch-5 .text-bar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 224, 185);
+    opacity: 0;
+    animation: showing 0s step-end 1.8s forwards;
+}
+
+#ch-5 .text-bar .bar {
+    position: absolute;
+    background-color: rgb(255, 181, 43);
+    width: 100%;
+    height: 25%;
+    top: 40%;
+    transform: translate(0, -40%);
+    vertical-align: middle;
+}
+
+#ch-5 .text-bar .bar.right {
+    position: absolute;
+    transform-origin: right;
+    transform: translateX(100%);
+    animation: bar-right 0.2s ease-out 2.5s forwards, bar-rotate 0.4s ease 3.4s forwards, hiding 0.4s ease 3.4s forwards;
+}
+
+#ch-5 .text-bar .bar.left {
+    position: absolute;
+    transform-origin: left;
+    transform: translateX(-100%);
+    animation: bar-left 0.2s ease-out 2.5s forwards, bar-rotate 0.4s ease 3.4s forwards, hiding 0.4s ease 3.4s forwards;
+}
+
+#ch-5 .text-bar .text-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: center;
+}
+
+#ch-5 .text-bar .text-container .text {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-size: 500%;
+    vertical-align: middle;
+    opacity: 0;
+    animation: text 0.5s ease 2.7s forwards, bar-rotate 0.4s ease 3.4s forwards, hiding 0.4s ease 3.4s forwards;
+    color: rgb(126, 82, 0);
+}
+
+#ch-5 .num {
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    font-size: 1000%;
+    color: gold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: showing 0.2s ease 4.5s forwards;
+}
+
+@keyframes showing {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hiding {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes bar-rotate {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(720deg);
+    }
+}
+
+@keyframes text {
+    from {
+        transform: rotateY(0deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotateY(720deg);
+        opacity: 1;
+    }
+}
+
+@keyframes bar-right {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bar-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+
+/* 
+ * Author: yui540
+ */
+
+#ch-5 .text-bar .circle-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    transform: translate(-50%, -50%);
+}
+
+#ch-5 .text-bar .circle-wrapper .left,
+#ch-5 .text-bar .circle-wrapper .right {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#ch-5 .text-bar .circle-wrapper .left::after,
+#ch-5 .text-bar .circle-wrapper .right::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    transform: rotate(-180deg);
+}
+
+#ch-5 .text-bar .circle-wrapper .left::after {
+    right: 0;
+    transform-origin: right;
+    transform: translateX(2px) rotate(-180deg);
+}
+
+#ch-5 .text-bar .circle-wrapper .right::after {
+    left: 0;
+    transform-origin: left;
+}
+
+#ch-5 .text-bar .circle-wrapper.type-9 {
+    width: 70vh;
+    height: 70vh;
+}
+
+#ch-5 .text-bar .circle-wrapper.type-9 .right::after,
+#ch-5 .text-bar .circle-wrapper.type-9 .left::after {
+    background-color: #092a86;
+}
+
+#ch-5 .text-bar .circle-wrapper.type-9 .right::after {
+    animation: progress 0.3s linear 3.8s forwards;
+}
+
+#ch-5 .text-bar .circle-wrapper.type-9 .left::after {
+    animation: progress2 0.3s linear 4.1s forwards;
+}
+
+@keyframes progress {
+    from {
+        transform: rotate(-180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes progress2 {
+    from {
+        transform: translateX(2px) rotate(-180deg);
+    }
+    to {
+        transform: translateX(2px) rotate(0deg);
+    }
+}
+
+@keyframes progress- {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes progress2- {
+    from {
+        transform: translateX(2px) rotate(0deg);
+    }
+    to {
+        transform: translateX(2px) rotate(180deg);
+    }
+}
